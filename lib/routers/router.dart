@@ -1,5 +1,6 @@
 import 'package:dashboard_flutter_web/routers/admin_handlers.dart';
 import 'package:dashboard_flutter_web/routers/no_page_found_handlers.dart';
+import 'package:dashboard_flutter_web/routers/screens_handlers.dart';
 import 'package:fluro/fluro.dart';
 
 class Flurorouter{
@@ -14,6 +15,9 @@ class Flurorouter{
   //Dashboard
   static String dashboardRoute = '/dashboard';
 
+  //Screens UI
+  static String screensRoute = '/screens';
+
 
   static void configureRoutes(){
     //Auth Routes
@@ -23,6 +27,9 @@ class Flurorouter{
 
     //404
     router.notFoundHandler = NoPageFoundHandlers.noPageFound;
+
+    //screens UI
+    router.define(screensRoute, handler: ScreenHandlers.webUI);
 
   }
 }
