@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'widgets/custom_background.dart';
+
 class AuthLayout extends StatelessWidget {
   const AuthLayout({super.key});
 
@@ -33,11 +35,7 @@ class _DesktopBody extends StatelessWidget {
       color: Colors.red,
       child: Row(
         children:  [
-         Expanded(
-           child: Container(
-             color: Colors.blue,
-           ),
-         ),
+          const CustomBackground(),
          Container(
           width: 600,
           height: double.infinity,
