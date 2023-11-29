@@ -1,8 +1,8 @@
 import 'package:dashboard_flutter_web/routers/router.dart';
-//import 'package:dashboard_flutter_web/ui/layouts/auth/auth_layout.dart';
+import 'package:dashboard_flutter_web/ui/layouts/auth/auth_layout.dart';
 import 'package:flutter/material.dart';
 
-import 'ui/layouts/screens/web_ui.dart';
+//import 'ui/layouts/screens/web_ui.dart';
 
 void main() {
 
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       onGenerateRoute: Flurorouter.router.generator,
       builder: (context, child){
-        return const WebUi();
+        return  AuthLayout(child: child!);
       },
     );
   }
