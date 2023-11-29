@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../widgets/links_bar.dart';
 import 'widgets/custom_background.dart';
 import 'widgets/custom_title.dart';
 
@@ -12,12 +13,16 @@ class AuthLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       body: ListView(
+        physics: const NeverScrollableScrollPhysics(),
         children:  [
+
           //Desktop
           _DesktopBody(child: child),
+          const Linksbar(),
           //Mobile
 
           //LinksBar
+
         ],
       )
     );
@@ -36,7 +41,7 @@ class _DesktopBody extends StatelessWidget {
 
     return  Container(
       width: size.width,
-      height: size.height,
+      height: size.height * 0.95,
       color: Colors.red,
       child: Row(
         children:  [
