@@ -1,4 +1,5 @@
 import 'package:dashboard_flutter_web/routers/admin_handlers.dart';
+import 'package:dashboard_flutter_web/routers/no_page_found_handlers.dart';
 import 'package:fluro/fluro.dart';
 
 class Flurorouter{
@@ -19,6 +20,9 @@ class Flurorouter{
     router.define(rootRoute, handler: AdminHandlers.login);
     router.define(loginRoute, handler: AdminHandlers.login);
     //router.define(registerRoute, handler: null);
+
+    //404
+    router.notFoundHandler = NoPageFoundHandlers.noPageFound;
 
   }
 }

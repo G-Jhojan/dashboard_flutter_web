@@ -14,12 +14,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
+      debugShowCheckedModeBanner: false,
       showSemanticsDebugger:  false,
       title: 'Material App',
       initialRoute: '/',
       onGenerateRoute: Flurorouter.router.generator,
       builder: (context, child){
-        return const Authlayout();
+        return const AuthLayout();
       },
     );
   }
