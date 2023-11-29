@@ -13,7 +13,7 @@ class AuthLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       body: ListView(
-        physics: const NeverScrollableScrollPhysics(),
+        //physics: const NeverScrollableScrollPhysics(),
         children:  [
 
           //Desktop
