@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
+//import 'package:flutter/rendering.dart';
 
 import '../../widgets/links_bar.dart';
 import 'widgets/custom_background.dart';
@@ -85,7 +85,7 @@ class _DesktopBody extends StatelessWidget {
          Container(
           width: 400,
           height: double.infinity,
-          color: Colors.green,
+          color: Colors.black,
           child:   Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

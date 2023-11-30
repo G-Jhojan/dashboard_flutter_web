@@ -4,13 +4,13 @@ import 'package:flutter/material.dart';
 
 import '../widgets/custom_outline_button.dart';
 
-class LoginView extends StatelessWidget {
-  const LoginView({super.key});
+class RegisterView extends StatelessWidget {
+  const RegisterView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return  Container(
-      margin: const EdgeInsets.only(top: 100),
+      margin: const EdgeInsets.only(top: 25),
       padding: const EdgeInsets.symmetric(horizontal: 20),
       color: Colors.black,
       child:  Center(
@@ -23,12 +23,30 @@ class LoginView extends StatelessWidget {
                 TextFormField(
                   style: const TextStyle(color: Colors.white),
                   decoration: buildInputDecoration(
+                    hint: 'Ingrese su Nombre',
+                    label: 'Nombre',
+                    icon: Icons.person_2_outlined
+                  ),
+                ),
+                const SizedBox(height: 10,),
+                TextFormField(
+                  style: const TextStyle(color: Colors.white),
+                  decoration: buildInputDecoration(
+                    hint: 'Ingrese su Apellido',
+                    label: 'Apellido',
+                    icon: Icons.person_3_outlined
+                  ),
+                ),
+                const SizedBox(height: 10,),
+                TextFormField(
+                  style: const TextStyle(color: Colors.white),
+                  decoration: buildInputDecoration(
                     hint: 'Ingrese su correo',
                     label: 'Correo',
                     icon: Icons.email_outlined
                   ),
                 ),
-                const SizedBox(height: 20,),
+                const SizedBox(height: 10,),
                 TextFormField(
                   obscureText: true,
                   style: const TextStyle(color: Colors.white),
@@ -42,14 +60,14 @@ class LoginView extends StatelessWidget {
                 const SizedBox(height: 20,),
                 CustomOutlinedButton(
                   onPressed: (){},
-                  text: 'Ingresar',
+                  text: 'Crear Cuenta',
                   //isFilled: true,
                   //color: Colors.white,
                 ),
-                const SizedBox(height: 20,),
+                const SizedBox(height: 5,),
 
-                LinkText(text: 'Crear una nueva cuenta', onPressed: (){
-                  Navigator.pushNamed(context, Flurorouter.registerRoute);
+                LinkText(text: 'Ir al Login', onPressed: (){
+                  Navigator.pushNamed(context, Flurorouter.loginRoute);
                 }),
               ],
             )
